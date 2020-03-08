@@ -25,13 +25,20 @@ a {
     margin: auto;
     text-align: center;
 }
-.header__content .jerry{
+.header__content .tom{
     width: 150px;
-    height: 150px;
+    height: 80px;
+    display: none;
+    cursor: none;
+}
+.header__content .jerry{
+    width: 80px;
+    height: 80px;
     display: none;
 }
 .header__content h1{
     position: relative;
+    
 }
 .arrow{
     width: 150px;

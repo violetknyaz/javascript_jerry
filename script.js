@@ -45,25 +45,39 @@ const arrow = document.querySelector('.arrow')
 const h1 = document.querySelector('h1');
 const header = document.querySelector('header');
 const p = document.querySelector('.header__content p');
+const tom = document.querySelector('.tom');
 
 let minH = 0;
 let minW = 0;
-let maxH = window.innerHeight - 150;
-let maxW = window.innerWidth - 150;
+let maxH = window.innerHeight - 80;
+let maxW = window.innerWidth - 80;
 function myRndHeight(minH, maxH) {
    return Math.floor(Math.random() * maxH + minH);
 }
 function myRndWidth(minW, maxW) {
    return Math.floor(Math.random() * maxW + minW);
 }
+document.addEventListener('mousemove', function(event){
+   tom.style.position = 'fixed';
+   tom.style.left = event.clientX - 10 + 'px';
+   tom.style.top = event.clientY - 10 + 'px';
+})
 h1.addEventListener('mouseover', function () {
    document.querySelector('.header__nav').style.display = 'none';
    arrow.style.display = 'none';
    p.style.display = 'none';
    jerry.style.display = 'block';
-   this.style.animation = 'opacity 1s infinite';
+   tom.style.display = 'block';
+   this.style.fontSize = '40px';
+   this.style.animation = 'opacity 1.5s infinite';
    this.innerHTML = `Try to catch me!`;
    this.style.color = 'red';   
+   this.style.background = 'white'; 
+   this.style.boxShadow = '0 0px 20px black';  
+   this.style.border = 'black 1px solid';   
+   this.style.borderRadius = '10px';   
+   this.style.padding = '20px 40px';   
+   this.style.cursor = 'pointer';   
    document.querySelector('main').style.display = 'none';
    document.querySelector('footer').style.display = 'none';
 })
@@ -78,4 +92,5 @@ jerry.addEventListener('mouseover', function () {
    this.style.left = rndWidth + 'px';
    this.style.zIndex = '5';
 })
+
 
