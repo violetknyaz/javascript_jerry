@@ -26,14 +26,14 @@ a {
     text-align: center;
 }
 .header__content .tom{
-    width: 150px;
-    height: 80px;
+    width: 200px;
+    height: 100px;
     display: none;
     cursor: none;
 }
 .header__content .jerry{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     display: none;
 }
 .header__content h1{

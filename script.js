@@ -49,8 +49,8 @@ const tom = document.querySelector('.tom');
 
 let minH = 0;
 let minW = 0;
-let maxH = window.innerHeight - 80;
-let maxW = window.innerWidth - 80;
+let maxH = window.innerHeight - 100;
+let maxW = window.innerWidth - 100;
 function myRndHeight(minH, maxH) {
    return Math.floor(Math.random() * maxH + minH);
 }
@@ -80,6 +80,8 @@ h1.addEventListener('mouseover', function () {
    this.style.cursor = 'pointer';   
    document.querySelector('main').style.display = 'none';
    document.querySelector('footer').style.display = 'none';
+   document.querySelector('.header').style.background = 'url(img/bg.jpg)';
+   document.querySelector('.header').style.backgroundSize = 'cover';
 })
 h1.addEventListener('click', function(){
    location.reload();
