@@ -47,15 +47,13 @@ const header = document.querySelector('header');
 const p = document.querySelector('.header__content p');
 const tom = document.querySelector('.tom');
 
-let minH = 0;
-let minW = 0;
-let maxH = window.innerHeight - 100;
-let maxW = window.innerWidth - 100;
-function myRndHeight(minH, maxH) {
-   return Math.floor(Math.random() * maxH + minH);
+function myRndHeight() {
+   let maxH = window.innerHeight - jerry.clientHeight;
+   return Math.floor(Math.random() * maxH);
 }
-function myRndWidth(minW, maxW) {
-   return Math.floor(Math.random() * maxW + minW);
+function myRndWidth() {
+   let maxW = window.innerWidth - jerry.clientWidth;
+   return Math.floor(Math.random() * maxW);
 }
 document.addEventListener('mousemove', function(event){
    tom.style.position = 'fixed';
@@ -87,12 +85,9 @@ h1.addEventListener('click', function(){
    location.reload();
 })
 jerry.addEventListener('mouseover', function () {
-   let rndHeight = myRndHeight(minH, maxH);
-   let rndWidth = myRndWidth(minW, maxW);
    this.style.position = 'absolute';
-   this.style.top = rndHeight + 'px';
-   this.style.left = rndWidth + 'px';
-   this.style.zIndex = '5';
+   this.style.top = myRndHeight() + 'px';
+   this.style.left = myRndWidth() + 'px';
 })
 
 
